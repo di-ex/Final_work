@@ -170,10 +170,10 @@ class WebElement(object):
         if self._wait_after_click:
             self._page.wait_page_loaded()
 
-    def move_to_element(self, element):
+    def move_to_element(self):
         """ Wait and move to the element. """
 
-        # element = self.wait_to_be_clickable()
+        element = self.wait_to_be_clickable()
         action = ActionChains(self._web_driver)
         action.move_to_element(element).perform()
 
