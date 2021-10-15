@@ -1,5 +1,3 @@
-import time
-
 import pytest
 from pages.wildberries import *
 
@@ -55,21 +53,8 @@ def test_total_price(web_browser):
 
     # Adding item to cart
     a = page.s_i.find()
-    # b = page.select_item.find()
-    # print('THIS b ----> ', b)
-    # z = WebElement.xyz(page.s_i, 1)
-    # time.sleep(3)
-    # a = page.my_list.find()
-    # for i in range(len(a)):
-    #     if i < 3:
-    #         a[i].move_to_element()
-    #         page.add_to_cart.click()
-    #         i += 1
     for i in range(len(a)):
         if i < 3:
-            page.move_to_element(i)
-            # page.add_to_cart.click()
+            a[i].move_to_element()
+            page.add_to_cart.click()
             i += 1
-
-
-
