@@ -1,13 +1,6 @@
-#!/usr/bin/python3
-# -*- encoding=utf8 -*-
-
-# This is example shows how we can manage failed tests
-# and make screenshots after any failed test case.
-
 import pytest
 import allure
 import uuid
-
 
 
 @pytest.fixture
@@ -16,6 +9,8 @@ def chrome_options(chrome_options):
     # chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--log-level=DEBUG')
+    # for delete a message 'DevTools listening on ws:'
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
     return chrome_options
 

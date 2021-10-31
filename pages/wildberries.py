@@ -26,20 +26,23 @@ class MainPage(WebPage):
     sort_products_by_price = WebElement(xpath='//a[contains(text(), "цене")]')
 
     # Prices of the products in search results
-    # price without discount
-    # products_prices_without = ManyWebElements(xpath='//span[@class="lower-price"]')
-    # price with discount
-    products_prices_with = ManyWebElements(xpath='//div[@class="product-card__brand"]//span[@class="price-commission__current-price"]')
+    products_prices = ManyWebElements(
+        xpath='//div[@class="product-card__brand"]//span[@class="price-commission__current-price"]')
+
+    # Button to sort products by discount
+    sort_products_by_discount = WebElement(xpath='//span[contains(text(), "скидке")]')
+
+    discount_list = ManyWebElements(xpath='//span[@class="product-card__sale"]')
 
     # Add item to cart
     select_item = WebElement(xpath='//div[@class="product-card__img-wrap"]')
-    s_i = ManyWebElements(xpath='//div[@class="product-card__img-wrap"]')
-
+    select_items = ManyWebElements(xpath='//div[@class="product-card__img-wrap"]')
 
     add_to_cart = WebElement(xpath='//a[@class="btn-main-sm j-add-to-basket"]')
     go_to_cart = WebElement(xpath='//a[@class="navbar-pc__link" and @href="/lk/basket"]')
     amount_items = ManyWebElements(xpath='//div[@class="b-top__count line"]/span[1]')
-    items_list = ManyWebElements(xpath='//div[@class="accordion__list-item list-item j-b-basket-item"]')
+    items_list = ManyWebElements(
+        xpath='//div[@class="accordion__list-item list-item j-b-basket-item"]')
 
     delete_item = WebElement(xpath='//button[@class="btn__del j-basket-item-del"]')
     empty_cart = WebElement(xpath='//div[@class="basket-page__basket-empty basket-empty"]')
@@ -49,6 +52,12 @@ class MainPage(WebPage):
     minus = WebElement(xpath='//button[@class="count__minus minus"]')
     summa = WebElement(xpath='//p[@class="b-top__total line"]//span[@data-link]')
     price = WebElement(xpath='//div[@class="list-item__price-new"]')
+    prices = ManyWebElements(xpath='//div[@class="list-item__price-new"]')
+
+    quick_view = WebElement(xpath='//button[@class="product-card__fast-view j-open-product-popup"]')
+    content = WebElement(xpath='//div[@class="i-popup-same-part-kt shown"]')
+
+    article = WebElement(xpath='//div[@class="same-part-kt__common-info"]/p/span[3]')
 
 
 class Categories(WebPage):
@@ -150,14 +159,62 @@ class Categories(WebPage):
     digital_title = 'Digital Wildberries'
 
 
-class Other(WebPage):
+class FiltrationItems(WebPage):
 
     def __init__(self, web_driver, url=''):
         if not url:
-            url = os.getenv("MAIN_URL") or 'https://www.wildberries.ru/'
+            url = 'https://www.wildberries.ru/catalog/elektronika/noutbuki-pereferiya/noutbuki-ultrabuki'
 
         super().__init__(web_driver, url)
 
-    delete_item = WebElement(xpath='//button[@class="btn__del j-basket-item-del"]')
-    empty_cart = WebElement(xpath='//div[@class="basket-page__basket-empty basket-empty"]')
+    brand = WebElement(xpath='//label[contains(text(), "Acer")]')
+    products_brand = ManyWebElements(xpath='//strong[@class="brand-name"]')
 
+    price_start = WebElement(xpath='//div[@class="start-n"]//input')
+    price_end = WebElement(xpath='//div[@class="end-n"]//input')
+    products_prices = ManyWebElements(
+        xpath='//div[@class="product-card__brand"]//span[@class="price-commission__current-price"]')
+
+    discount = WebElement(xpath='//span[contains(text(), "от 30% и выше")]')
+    products_discount = ManyWebElements(xpath='//span[@class="product-card__sale"]')
+
+    products_titles = ManyWebElements(xpath='//span[@class="goods-name"]')
+    screen_resolution = WebElement(xpath='//label[contains(text(), "3840x2160")]')
+
+    operating_system = WebElement(xpath='//label[contains(text(), "Linux")]')
+
+    ram_size = WebElement(xpath='//label[contains(text(), "8 GB")]')
+
+    hdd_storage = WebElement(xpath='//label[contains(text(), "500 Гб")]')
+
+
+class AirTickets(WebPage):
+
+    def __init__(self, web_driver, url=''):
+        if not url:
+            url = 'https://travel.wildberries.ru/'
+
+        super().__init__(web_driver, url)
+
+    from_where = WebElement(id='departureButton')
+    write_from_where = WebElement(xpath='//input[@class="_1SrpT _yZJ7"]')
+    to_where = WebElement(id='arrivalButton')
+    write_to_where = WebElement(xpath='//input[@class="_1SrpT _20K-h"]')
+    start_day = WebElement(id='startDay')
+    end_day = WebElement(id='endDay')
+    search_button = WebElement(xpath='//button[@class="_1MYfn"]')
+    select_start_day = WebElement(xpath='//td[@aria-label="понедельник, 22 ноября 2021 г."]')
+    select_end_day = WebElement(xpath='//td[@aria-label="воскресенье, 28 ноября 2021 г."]')
+
+    results_list = WebElement(id='resultsTicketsList')
+    results_from_where = ManyWebElements(xpath='//div[@class="_3BDi5 _1flX6"]//span[@class="_2p9Cb HPAbM"]')
+    results_to_where = ManyWebElements(xpath='//div[@class="fJG5l _1flX6"]//span[@class="_2p9Cb HPAbM"]')
+
+    tickets_price = ManyWebElements(xpath='//span[@class="_3qqJv"]')
+
+    transfer_0 = WebElement(xpath='//span[@class="_3Mxmu _3n6tN"][contains(text(), "Прямой")]')
+    transfer_1 = WebElement(xpath='//span[@class="_3Mxmu _3n6tN"][contains(text(), "1 Пересадка")]')
+    transfer_2 = WebElement(xpath='//span[@class="_3Mxmu _3n6tN"][contains(text(), "2 Пересадки")]')
+    check_transfer = ManyWebElements(xpath='//span[@class="_2XVES"]')
+    baggage = WebElement(xpath='//span[@class="_3Mxmu _3n6tN"][contains(text(), "Багаж")]')
+    check_baggage = ManyWebElements(xpath='//span[@class="_1vYx3"]')

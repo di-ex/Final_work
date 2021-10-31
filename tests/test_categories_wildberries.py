@@ -1,9 +1,10 @@
-import pytest
 from pages.wildberries import Categories
 from pages.base import WebPage
 
 
 def test_women_categories(web_browser):
+    """Check category Women. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.women_categories.click()
@@ -11,6 +12,8 @@ def test_women_categories(web_browser):
 
 
 def test_men_categories(web_browser):
+    """Check category Men. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.men_categories.click()
@@ -18,6 +21,8 @@ def test_men_categories(web_browser):
 
 
 def test_children_categories(web_browser):
+    """Check category Children. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.children_categories.click()
@@ -25,6 +30,8 @@ def test_children_categories(web_browser):
 
 
 def test_shoes_categories(web_browser):
+    """Check category Shoes. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.shoes_categories.click()
@@ -32,6 +39,8 @@ def test_shoes_categories(web_browser):
 
 
 def test_accessories_categories(web_browser):
+    """Check category Accessories. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.accessories_categories.click()
@@ -39,6 +48,8 @@ def test_accessories_categories(web_browser):
 
 
 def test_electronics_categories(web_browser):
+    """Check category Electronics. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.electronics_categories.click()
@@ -46,6 +57,8 @@ def test_electronics_categories(web_browser):
 
 
 def test_video_categories(web_browser):
+    """Check category Video. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.video_categories.click()
@@ -53,6 +66,8 @@ def test_video_categories(web_browser):
 
 
 def test_air_tickets_categories(web_browser):
+    """Check category Air tickets. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.air_tickets_categories.click()
@@ -60,6 +75,8 @@ def test_air_tickets_categories(web_browser):
 
 
 def test_premium_categories(web_browser):
+    """Check category Premium. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.premium_categories.click()
@@ -67,6 +84,8 @@ def test_premium_categories(web_browser):
 
 
 def test_household_appliances_categories(web_browser):
+    """Check category Household appliances. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.household_appliances_categories.click()
@@ -74,6 +93,8 @@ def test_household_appliances_categories(web_browser):
 
 
 def test_books_categories(web_browser):
+    """Check category Books. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.books_categories.click()
@@ -81,6 +102,8 @@ def test_books_categories(web_browser):
 
 
 def test_sport_categories(web_browser):
+    """Check category Sport. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.sport_categories.click()
@@ -89,6 +112,8 @@ def test_sport_categories(web_browser):
 
 
 def test_school_categories(web_browser):
+    """Check category School. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.school_categories.click()
@@ -96,6 +121,8 @@ def test_school_categories(web_browser):
 
 
 def test_beauty_categories(web_browser):
+    """Check category Beauty. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.beauty_categories.click()
@@ -103,6 +130,8 @@ def test_beauty_categories(web_browser):
 
 
 def test_toys_categories(web_browser):
+    """Check category Toys. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.toys_categories.click()
@@ -110,6 +139,8 @@ def test_toys_categories(web_browser):
 
 
 def test_food_categories(web_browser):
+    """Check category Food. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.food_categories.click()
@@ -117,6 +148,8 @@ def test_food_categories(web_browser):
 
 
 def test_garden_cottage_categories(web_browser):
+    """Check category Garden cottage. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.garden_cottage_categories.click()
@@ -124,6 +157,8 @@ def test_garden_cottage_categories(web_browser):
 
 
 def test_pet_products_categories(web_browser):
+    """Check category Pet products. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.pet_products_categories.click()
@@ -131,6 +166,8 @@ def test_pet_products_categories(web_browser):
 
 
 def test_stationery_categories(web_browser):
+    """Check category Stationery. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.stationery_categories.click()
@@ -138,6 +175,8 @@ def test_stationery_categories(web_browser):
 
 
 def test_health_categories(web_browser):
+    """Check category Health. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.health_categories.click()
@@ -145,6 +184,8 @@ def test_health_categories(web_browser):
 
 
 def test_repair_categories(web_browser):
+    """Check category For repair. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.repair_categories.click()
@@ -152,6 +193,8 @@ def test_repair_categories(web_browser):
 
 
 def test_house_categories(web_browser):
+    """Check category House. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.house_categories.click()
@@ -159,6 +202,8 @@ def test_house_categories(web_browser):
 
 
 def test_automotive_supplies_categories(web_browser):
+    """Check category Automotive supplies. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.automotive_supplies_categories.click()
@@ -166,6 +211,8 @@ def test_automotive_supplies_categories(web_browser):
 
 
 def test_jewelry_categories(web_browser):
+    """Check category Jewelry. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.jewelry_categories.click()
@@ -173,6 +220,8 @@ def test_jewelry_categories(web_browser):
 
 
 def test_brands_categories(web_browser):
+    """Check category Brands. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.brands_categories.click()
@@ -180,6 +229,8 @@ def test_brands_categories(web_browser):
 
 
 def test_discounts_categories(web_browser):
+    """Check category Discounts. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.discounts_categories.click()
@@ -187,6 +238,8 @@ def test_discounts_categories(web_browser):
 
 
 def test_products_adults_categories(web_browser):
+    """Check category Products adults. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.products_adults_categories.click()
@@ -194,6 +247,8 @@ def test_products_adults_categories(web_browser):
 
 
 def test_digital_categories(web_browser):
+    """Check category Digital. """
+
     page = Categories(web_browser)
     page.categories_list.click()
     page.digital_categories.click()

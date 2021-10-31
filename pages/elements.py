@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-# -*- encoding=utf8 -*-
-
 import time
 from termcolor import colored
 
@@ -176,6 +173,14 @@ class WebElement(object):
         element = self.wait_to_be_clickable()
         action = ActionChains(self._web_driver)
         action.move_to_element(element).perform()
+
+    def ctrl_a_del(self):
+        element = self.find()
+        element.send_keys(Keys.CONTROL + "a", Keys.DELETE)
+
+    def push_enter(self):
+        element = self.find()
+        element.send_keys(Keys.ENTER)
 
     def right_mouse_click(self, x_offset=0, y_offset=0, hold_seconds=0):
         """ Click right mouse button on the element. """
