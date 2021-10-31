@@ -1,5 +1,6 @@
 Финальное тестовое задание.
 Тестирование интернет-магазина Wildberries (https://www.wildberries.ru/)
+-----
 
 Файлы
 -----
@@ -31,7 +32,7 @@
 
 2) Скачать Selenium WebDriver https://chromedriver.chromium.org/downloads (выберите версию, совместимую с вашим браузером)
 
-3) Run tests:
+3) Запуск тестов:
 
     ```bash
     python3 -m pytest -v --driver Chrome --driver-path ~/chromedriver.exe tests/*
