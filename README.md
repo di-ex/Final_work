@@ -14,7 +14,7 @@
 
 [pages/elements.py](pages/elements.py) содержит вспомогательный класс для определения веб-элементов на веб-страницах.
 
-[tests/test_smoke_wildberries_market.py](tests/test_smoke_wildberries_market.py) содержит smoke тесты
+[tests/test_smoke_wildberries.py](tests/test_smoke_wildberries.py) содержит smoke тесты
 
 [tests/test_filter_items_wildberries.py](tests/test_filter_items_wildberries.py) содержит тесты фильтрации поиска
 
